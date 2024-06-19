@@ -21,7 +21,7 @@ public class ProductService {
     }
 
     public Product getProduct(int id) {
-        return productRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Product not found"));
+        return productRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Product with id" + id + "not found"));
     }
     public Product createProduct(Product product) {
         return productRepository.save(product);
@@ -32,7 +32,7 @@ public class ProductService {
             product.setId(id);
             return productRepository.save(product);
         } else {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Product not found");
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Product with id" + id + "not found");
         }
     }
 
@@ -41,7 +41,7 @@ public class ProductService {
             productRepository.deleteById(id);
             return "Product deleted";
         } else {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Product not found");
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Product with id" + id + "not found");
         }
     }
 }
