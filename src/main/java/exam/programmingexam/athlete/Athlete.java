@@ -34,4 +34,13 @@ private List<Result> results;
         this.disciplines = disciplines;
         this.results = results;
 }
+
+    public Athlete(String name, String gender, int age, String club, List<Discipline> disciplines, List<Result> results) {
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
+        this.club = club;
+        this.disciplines = disciplines;
+        this.results = results;
+    }
 }

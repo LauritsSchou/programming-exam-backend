@@ -29,4 +29,9 @@ public class Discipline {
         this.athletes = athletes;
     }
 
+    public Discipline(String name, ResultType resultType, List<Athlete> athletes) {
+        this.name = name;
+        this.resultType = resultType;
+        this.athletes = athletes;
+    }
 }
