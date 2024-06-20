@@ -63,7 +63,7 @@ public class InitData implements CommandLineRunner {
 
         athletes = Arrays.asList(
                 new Athlete(1, "John Doe", "Male", 25, "Club 1", disciplines.subList(0, 5), results.subList(0, 5)),
-                        new Athlete(2, "Jane Doe", "Female", 23, "Club 2", disciplines.subList(5, 10), null),
+                        new Athlete(2, "Jane Doe", "Female", 23, "Club 2", disciplines.subList(5, 10), results.subList(5, 10)),
                         new Athlete(3, "Alice", "Female", 27, "Club 3", disciplines.subList(0, 5), null)
                 );
         athleteRepository.saveAll(athletes);
