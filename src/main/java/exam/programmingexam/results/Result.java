@@ -16,7 +16,7 @@ import java.util.Date;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Results {
+public class Result {
     @Id
     @GeneratedValue
     private int id;
@@ -26,7 +26,7 @@ public class Results {
     @ManyToOne
     private Discipline discipline;
 
-    public Results(int id, ResultType resultType, Date date, String resultValue, Discipline discipline) {
+    public Result(int id, ResultType resultType, Date date, String resultValue, Discipline discipline) {
         this.id = id;
         this.resultType = resultType;
         this.date = date;
